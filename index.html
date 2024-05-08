@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <script src="https://angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
+
+    <link rel="stylesheet" href="/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/app.js"></script>
+
+    <script src="/homeCtrl.js"></script>
+
+    <!-- Favicons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/images/ACT Promoters Final Logo.png"
+    />
+
+    <!-- Animate CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>ACT PROMOTORS</title>
+  </head>
+
+  <body>
+    <div class="">
+      <header ng-include="'/src/Topbar.html'">
+        <nav id="Topbar">
+          <img
+            src="assets/images/ACT Promoters Final Logo-min.jpg"
+            alt="ACT Promotors"
+            loading="lazy"
+            id="navlogo"
+          />
+          <ul class="nav nav-pills pull-right">
+            <li ui-sref-active="active"><a href="/src/home.html">Home</a></li>
+            <li ui-sref-active="active">
+              <a href="/src/Projects.html">Projects</a>
+            </li>
+            <li ui-sref-active="active">
+              <a href="/src/Contact.html">Contact</a>
+            </li>
+          </ul>
+          <button class="burger-menu" id="burger-menu">
+            <ion-icon class="bars" name="menu-outline"></ion-icon>
+          </button>
+        </nav>
+      </header>
+      <div class="maincanvas" ui-view>
+        <div id="header-hero-container">
+          <section class="hero" id="hero">
+            <div class="fade"></div>
+            <div class="hero-text">
+              <h1>Your Future Home Is Right Here</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectectur adipisicing elit.
+                Laboriosam assumenda ea quo cupiditate facere deleniti fuga
+                officia.
+              </p>
+            </div>
+          </section>
+        </div>
+      </div>
+      <footer ng-include="'/src/footer.html'"></footer>
+    </div>
+  </body>
+</html>
